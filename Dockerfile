@@ -1,6 +1,5 @@
-# Pull base image 
-From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+# use a node base image
+FROM tomcat:8.5.16-jre8-alpine
+MAINTAINER devops421 "tarungiduturi421@gmail.com"
+COPY gameoflife.war /usr/local/tomcat/webapps
+CMD ["catalina.sh", "run"]
