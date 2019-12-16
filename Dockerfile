@@ -1,5 +1,5 @@
 # use a node base image
 FROM tomcat:8.5.16-jre8-alpine
 MAINTAINER devops421 "tarungiduturi421@gmail.com"
-COPY game-of-life/webapp/target/webapp.war /usr/local/tomcat/webapps
+COPY **/*.war /usr/local/tomcat/webapps
 CMD ["catalina.sh", "run"]
